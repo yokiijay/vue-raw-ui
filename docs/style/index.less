@@ -1,0 +1,34 @@
+// Mixins
+.box(){
+  background: rgba(65, 105, 225, 0.1);
+  border: 6px solid royalblue;
+  box-sizing: border-box;
+  color: hotpink;
+  border-radius: 2px;
+}
+
+// Styles
+.box-basic {
+  .box();
+
+  .ball {
+    width: 30px;
+    height: 30px;
+    background: hotpink;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.box-size {
+  .box();
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 0 10px;
+}
+.box-size .box-size {
+  margin: 0;
+}

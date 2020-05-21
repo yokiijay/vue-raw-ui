@@ -2,10 +2,19 @@ const {VueLoaderPlugin} = require('vue-loader')
 const path = require('path')
 const glob = require('glob')
 
+// 配置页面
+const components = ['Box', 'Avatar']
+const tutorials = ['Box大小', 'Box基本布局', 'Box排列布局']
+const examples = ['用Box轻松布局导航栏']
+
 const sections = (() => {
-  const docs = glob
+  const docsOrigin = glob
     .sync('docs/*.md')
     .map(p => ({name: path.basename(p, '.md'), content: p}))
+  const docs = tutorials.map(item => ({
+    name: item,
+    content: docsOrigin.find(doc => doc.name === item).content
+  }))
   const demos = []
   let faq = '' // 约定至多只有一个faq.md
   const guides = []
@@ -21,13 +30,22 @@ const sections = (() => {
   })
   return [
     {
-      name: 'Components',
-      components: 'src/*.vue',
+      name: 'RAW UI 组件库',
+      components: components.map(item => `src/${item}.vue`),
+      // components: 'src/*.vue',
       usageMode: 'expand'
     },
     {
-      name: 'Demo',
+      name: '教程',
       sections: demos,
+      sectionDepth: 2
+    },
+    {
+      name: '示例',
+      sections: examples.map(item => ({
+        name: item,
+        content: `docs/${item}.md`
+      })),
       sectionDepth: 2
     },
     ...(faq ? [faq] : []),
