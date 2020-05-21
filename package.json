@@ -1,7 +1,7 @@
 {
   "name": "vue-raw-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "一套轻量级Vue原始UI组件库, 仅有4kb",
   "author": "https://github.com/Yokiijay",
   "license": "MIT",
   "repository": {
@@ -11,7 +11,10 @@
   "keywords": [
     "vue",
     "sfc",
-    "component"
+    "component",
+    "raw-ui",
+    "ui",
+    "组件"
   ],
   "files": [
     "src",
