@@ -1,5 +1,7 @@
 # vue-raw-ui
 
+[🌈See documentation 🌈](https://yokiijay.github.io/vue-raw-ui/)
+
 [![Build Status](https://badgen.net/travis/Yokiijay/vue-raw-ui/master)](https://travis-ci.com/Yokiijay/vue-raw-ui)
 [![NPM Download](https://badgen.net/npm/dm/@yokiijay/vue-raw-ui)](https://www.npmjs.com/package/@yokiijay/vue-raw-ui)
 [![NPM Version](https://badge.fury.io/js/%40yokiijay%2Fvue-raw-ui.svg)](https://www.npmjs.com/package/@yokiijay/vue-raw-ui)
@@ -22,25 +24,35 @@ short description + sample image(png/gif/mp4)
 
 ## Introduction
 
-If there is no more words to write, this section can be deleted.
+一套轻量级 Vue 原始 UI 组件库, 仅有 4kb。
+
+万物基于原始组件，使用 Box 容器可以很好的布局所有元素。
 
 [⬆ Back to Top](#table-of-contents)
 
 ## Features
 
+More incoming...
+
 [⬆ Back to Top](#table-of-contents)
 
 ## Install
+
+`yarn add vue-raw-ui`
 
 [⬆ Back to Top](#table-of-contents)
 
 ## Usage
 
+```
+import { Box } from 'vue-raw-ui
+```
+
 [⬆ Back to Top](#table-of-contents)
 
 ## Links
 
-- [docs](https://Yokiijay.github.io/vue-raw-ui/)
+- [docs](https://yokiijay.github.io/vue-raw-ui/)
 
 [⬆ Back to Top](#table-of-contents)
 
