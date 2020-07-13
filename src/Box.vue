@@ -18,6 +18,7 @@
       minHeight: height ? height : '',
       flex: flex ? parseFloat(flex) : ''
     }"
+    @click="$emit('click')"
   >
     <slot></slot>
   </div>
@@ -98,7 +99,11 @@ export default {
     /**
      * 让被包裹的img图片充满容器显示
      */
-    fit: Boolean
+    fit: Boolean,
+    /**
+     * 宽度100%
+     */
+    fluid: Boolean
   },
   computed: {
     flexDirection() {
@@ -147,6 +152,7 @@ export default {
       return alignItems
     },
     width() {
+      if (this.fluid) return '100%'
       if (!this.size) return
       switch (this.size.constructor.name) {
         case 'String': {
